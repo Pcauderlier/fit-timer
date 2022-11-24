@@ -1,0 +1,35 @@
+.form-box{
+    display: flex;
+    flex-direction: column;
+    width : 100%;
+    height: fit-content;
+    border : solid 2px black
+
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 5px;
+    
+}
+label{
+
+    font-weight: bold;
+}
+.time{
+    width : 130px;
+}
+input {
+    text-align: center;
+    margin : 5px 10px ;
+    padding : 5px;
+
+}
+input[type=text]{
+    
+    border : none;
+    border-bottom: 2px solid orange;
+}
+
