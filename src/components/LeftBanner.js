@@ -1,10 +1,12 @@
 import Form from './Form';
 import '../styles/LeftBanner.css'
-
-export default function LeftBanner({child}){
+// Changer en page preLoad
+export default function LeftBanner({list,updateList}){
+    
+    
     return (
         <nav>
-            <Form/>
+            <Form list={list} updateList={updateList}/>
         </nav>
     )
 }
