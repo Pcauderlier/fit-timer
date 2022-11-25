@@ -1,0 +1,10 @@
+.boite-formulaire {
+    display: flex;
+
+    min-width : 340px;
+    max-width: 800px;
+
+    padding: 10px;
+    
+
+}

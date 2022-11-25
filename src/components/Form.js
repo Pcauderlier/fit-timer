@@ -4,12 +4,9 @@ import '../styles/Form.css'
 
 function Form({list,updateList}){
 
-    
-    
-    
     let [exercise , updateExercise] = useState({
          name : '',
-         repetitionNumber : 0,
+         repetitionNumber : 1,
          pauseBetweenRepetition : [0,0],
          pauseBetweenExe : [0,0],
          needTimer : false,
@@ -62,8 +59,6 @@ function Form({list,updateList}){
         updateExercise({...exercise, needTimer : !(a)})
         
     }
-    
-
     return (
         <div className='form-box'>
             <form onSubmit={(e)=>handleSubmit(e)}>

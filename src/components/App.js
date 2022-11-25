@@ -1,7 +1,7 @@
 import '../styles/App.css'
 import Timer from './Timer';
 
-import LeftBanner from './LeftBanner';
+import CreationSeance from './CreationSeance';
 import { useState } from 'react';
 
 
@@ -10,9 +10,9 @@ function App() {
   let [list , updateList] = useState([])
   return (
     <div>
-      <LeftBanner list={list} updateList={updateList} />
+      <CreationSeance list={list} updateList={updateList} />
         
-      <Timer/>
+      {/*<Timer/>*/}
 
     </div>
   );
