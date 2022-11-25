@@ -8,8 +8,10 @@ import { useState } from 'react';
 
 function App() {
   let [list , updateList] = useState([])
+
   return (
-    <div>
+    <div className='BG'>
+    
       <CreationSeance list={list} updateList={updateList} />
         
       {/*<Timer/>*/}

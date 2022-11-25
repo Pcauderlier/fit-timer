@@ -11,13 +11,7 @@ function Form({list,updateList}){
          pauseBetweenExe : [0,0],
          needTimer : false,
          duration : [0,0],
-         reset : function(){ // pas fonctionelle => reussir a reset certain param lors du submit
-            updateExercise({
-            name : '' ,
-            repetitionNumber : 0
-            },...exercise
-            )
-         }
+        
     })
     function handleSubmit(e){
         e.preventDefault()

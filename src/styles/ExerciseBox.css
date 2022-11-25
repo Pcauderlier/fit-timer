@@ -1,0 +1,7 @@
+.exe-box{
+    height: 150px;
+    min-width : 200px;
+    margin : 10px;
+
+    border : 1px black solid;
+}

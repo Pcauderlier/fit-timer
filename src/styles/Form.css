@@ -1,7 +1,9 @@
-.form-box{
 
+.form-box{
+    
     flex-direction: column;
-    width : 100%;
+    width : 80%;
+    min-width : 340px;
     height: fit-content;
     border : solid 2px black;
     border-radius: 30px;
