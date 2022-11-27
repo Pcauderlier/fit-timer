@@ -19,7 +19,8 @@ export default function ListeExercise({list , updateList}){
                 pauseBetweenExe = {i.exercise.pauseBetweenExe}
                 needTimer = {i.exercise.needTimer}
                 duration = {i.exercise.duration}
-
+                list={list}
+                updateList={updateList}
                 />
                 )
                 )

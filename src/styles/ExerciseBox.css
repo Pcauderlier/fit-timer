@@ -14,7 +14,7 @@
     
     border : 1px black solid;
 }
-h2{
+.titre-exe{
 
     text-decoration: underline;
     margin-top: 0px;
@@ -23,10 +23,39 @@ h2{
     margin-right: 10px;
 
 }
-.index{
-    text-align: left;
-    margin-left: 15px;
-    margin-top : 10px;
+.index-box{
+
+    position: relative;
+    height: 30px;
+    align-items: center;
+}
+.index{ 
+    text-align: center;
+    font-weight: bold;
+
     color:#782800;
 
+}
+.next{
+    position :absolute;
+    right:15px;
+    top: 5px;
+}
+.prev{
+    position :absolute;
+    left:15px;
+    top: 5px; 
+}
+.butt{
+    text-align: center;
+    border: 1px solid black;
+    font-size: 14px;
+    border : 1px solid black;
+    border-radius: 10px;
+    background-color: #a5f0f3;
+
+}
+.butt:hover{
+    color : white;
+    background-color: black;
 }

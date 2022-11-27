@@ -66,13 +66,13 @@ function Form({list,updateList}){
     }
     return (
         <div className='form-box'>
-            <h1> Add Exercises to your session : </h1>
+            <h2 className='titre-form'> Add Exercises to your session : </h2>
             <form onSubmit={(e)=>handleSubmit(e)}>
                <div className='input-box' > <label>Exercise Name</label>
                     <input type='text' name = 'name' placeholder='Pompes' 
                     onChange={(e)=>handleName(e.target.value)} />
                </div>
-               <div className='input-box'> <label>Number of repetition </label>
+               <div className='input-box'> <label>Number of series </label>
                     <input type='number' min='0' step='1' name='repetiton'
                     onChange={(e)=> handleRepetition(e.target.value)} 
                         placeholder='1'

@@ -10,6 +10,7 @@ export default function CreationSeance({list,updateList, startSeance, updateStar
     return (
         <div className='page'>
             <button className='back' onClick={()=>handleTitre()}>back</button>
+            <h1 className='titre-seance'>{titre[0]}</h1>
             <Form list={list} updateList={updateList}/>            
             <ListeExercise list={list} updateList={updateList} />
             {list.length  > 0 &&

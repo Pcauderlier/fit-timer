@@ -4,11 +4,14 @@ body{
 }
 .back{
     text-align: center;
-    width: 50px;
-    height: 20px;
+    width: 70px;
+    height: 30px;
     border: 1px solid black;
     font-size: 14px;
     position: absolute;
+    border : 1px solid black;
+    border-radius: 10px;
+    background-color: #a5f0f3;
     top: 10px;
     left: 10px;
     
@@ -26,6 +29,16 @@ body{
     align-items: center;
 
 
+}
+.titre-seance{
+    word-wrap: break-word;
+    text-align: center;
+    width:80%;
+    min-width: 300px;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-left: 20px;
+    letter-spacing: 5px;
 }
 .start{
     margin : 20px;

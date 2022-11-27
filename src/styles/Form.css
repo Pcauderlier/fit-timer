@@ -3,14 +3,15 @@
     
     flex-direction: column;
     width : 40%;
-    min-width : 340px;
+    min-width : 330px;
     height: fit-content;
     border : solid 2px black;
     border-radius: 30px;
     background-color: #a5f0f3 /*#00d8b8 */ ;
     color: #011a49;
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 16px;
+    padding: 10px;
 
 }
 
@@ -64,8 +65,9 @@ input[type=submit]{
     background-color: orange;
     width: 80%;
 }
-h1{
+.titre-form{
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    text-decoration: none;
 }
 
