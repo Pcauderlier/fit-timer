@@ -9,7 +9,7 @@
     border-radius: 30px;
     background-color: #a5f0f3 /*#00d8b8 */ ;
     color: #011a49;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 16px;
 
 }
@@ -38,11 +38,7 @@ input {
     border-bottom: solid 2px rgb(0, 40, 172);
 
 }
-input[type=text]{
-    
-    border : none;
-    border-bottom: 3px solid rgb(12, 1, 168);
-}
+
 .button:hover{
     font-weight: bold;
     

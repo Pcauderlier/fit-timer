@@ -2,6 +2,21 @@
 body{
     background-color: #d6feff/*#bffff5*/;
 }
+.back{
+    text-align: center;
+    width: 50px;
+    height: 20px;
+    border: 1px solid black;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    
+}
+.back:hover{
+    color : white;
+    background-color: black;
+}
 .page{
     
     display: flex;
