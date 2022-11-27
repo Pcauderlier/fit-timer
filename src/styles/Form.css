@@ -7,9 +7,10 @@
     height: fit-content;
     border : solid 2px black;
     border-radius: 30px;
-    background-color: #00d8b8  ;
-    color: #002a78;
+    background-color: #a5f0f3 /*#00d8b8 */ ;
+    color: #011a49;
     margin-top: 20px;
+    font-size: 16px;
 
 }
 
@@ -32,7 +33,7 @@ input {
     text-align: center;
     margin : 5px 10px ;
     padding : 5px;
-    background-color: #00d8b8;
+    background-color: #a5f0f3;
     border: none;
     border-bottom: solid 2px rgb(0, 40, 172);
 
@@ -55,6 +56,7 @@ input[type=text]{
     
     border :1px solid rgb(12, 1, 168);
     border-radius: 20px;
+    margin: 8px ;
 }
 .checkbox{
     background-color: rgb(2, 253, 2);
@@ -65,5 +67,9 @@ input[type=text]{
 input[type=submit]{
     background-color: orange;
     width: 80%;
+}
+h1{
+    text-align: center;
+    letter-spacing: 5px;
 }
 

@@ -1,6 +1,6 @@
 
 body{
-    background-color: #bffff5;
+    background-color: #d6feff/*#bffff5*/;
 }
 .page{
     
@@ -19,6 +19,7 @@ body{
     border : 4px solid orange;
     padding: 15px 30px;
     border-radius: 10px;
+    background-color: #d6feff;
     
 }
 .start:hover{

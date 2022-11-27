@@ -1,11 +1,13 @@
+@font-face {
+	font-family : 'Courgette';
+	src : url("../assets/Courgette-Regular.ttf")
+}
+body{
+    font-family : 'Courgette';
+}
 .BG{
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
-}
-body {
-    /*background-image: ur l('../assets/haltere.jpg');*/
-    background-color: rgb(226, 243, 248);
-
 }

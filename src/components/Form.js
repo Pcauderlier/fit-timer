@@ -66,6 +66,7 @@ function Form({list,updateList}){
     }
     return (
         <div className='form-box'>
+            <h1> Add Exercises to your session : </h1>
             <form onSubmit={(e)=>handleSubmit(e)}>
                <div className='input-box' > <label>Exercise Name</label>
                     <input type='text' name = 'name' placeholder='Pompes' 
