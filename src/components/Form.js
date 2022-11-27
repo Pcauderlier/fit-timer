@@ -4,6 +4,7 @@ import '../styles/Form.css'
 
 function Form({list,updateList}){
 
+    
     let [exercise , updateExercise] = useState({
          name : '',
          repetitionNumber : 1,
@@ -14,8 +15,18 @@ function Form({list,updateList}){
         
     })
     function handleSubmit(e){
+        let l = [];
+        list.map((e)=>l.push(e.exercise.name))
+
+        
         e.preventDefault()
-        updateList([...list,{exercise}])
+        if (exercise.name === '' || l.includes(exercise.name) ){
+            alert('No empty or identic names')
+        }
+        else{
+            updateList([...list,{exercise}])
+        }
+        
     }
     function handleName(value){
         updateExercise({...exercise, name : value})

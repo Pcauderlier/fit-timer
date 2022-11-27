@@ -1,8 +1,10 @@
 .list-box{
-    width : 90%;
+    width : 100%;
     height: auto;
-    border : solid rebeccapurple 2px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
 }
+

@@ -1,11 +1,11 @@
-
-body html{
-    height : 100%;
-    width : 100%;
-    
+.BG{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 body {
-    /*background-image: url('../assets/haltere.jpg');*/
+    /*background-image: ur l('../assets/haltere.jpg');*/
     background-color: rgb(226, 243, 248);
 
 }

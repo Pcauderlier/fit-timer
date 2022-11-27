@@ -2,13 +2,14 @@
 .form-box{
     
     flex-direction: column;
-    width : 80%;
+    width : 40%;
     min-width : 340px;
     height: fit-content;
     border : solid 2px black;
     border-radius: 30px;
-    background-color: rgb(0, 233, 233);
-    color: rgba(1, 0, 75, 0.795);
+    background-color: #00d8b8  ;
+    color: #002a78;
+    margin-top: 20px;
 
 }
 
@@ -31,9 +32,9 @@ input {
     text-align: center;
     margin : 5px 10px ;
     padding : 5px;
-    background-color: rgb(0, 233, 233);
+    background-color: #00d8b8;
     border: none;
-    border-bottom: solid 2px rgb(4, 62, 252);
+    border-bottom: solid 2px rgb(0, 40, 172);
 
 }
 input[type=text]{
@@ -62,7 +63,7 @@ input[type=text]{
     
 }
 input[type=submit]{
-    background-color: rgb(255, 145, 0);
+    background-color: orange;
     width: 80%;
 }
 

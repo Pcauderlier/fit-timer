@@ -7,15 +7,22 @@ import { useState } from 'react';
 
 
 function App() {
-  let [list , updateList] = useState([])
+  //List est une liste d'objet {exercise : {name,repet,...}}
+  // Pour acceder aux caracteristique d'un objet :
+  //list.map((e)==> e.exercice.caracteristique)
+  // Louche mais je ne sais pas trop si je peux faire autrement
+  let [list , updateList] = useState([]) 
+  let [startSeance , updateStartSeance] = useState(false)
 
   return (
     <div className='BG'>
-    
-      <CreationSeance list={list} updateList={updateList} />
-        
-      {/*<Timer/>*/}
-
+      {!startSeance ? 
+        <CreationSeance list={list} updateList={updateList} 
+      startSeance = {startSeance} updateStartSeance ={updateStartSeance} />
+      :
+      <Timer/>
+      }
+      
     </div>
   );
 }
