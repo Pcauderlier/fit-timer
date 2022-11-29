@@ -21,13 +21,13 @@ function App() {
       <Titre updateTitre = {updateTitre} titre={titre}
       />
       :
-        !startSeance ? 
+        //!startSeance ? 
         <CreationSeance list={list} updateList={updateList} 
       startSeance = {startSeance} updateStartSeance ={updateStartSeance} 
         titre={titre} updateTitre={updateTitre}
       />
-      :
-      <Timer/>
+      //:
+      //<Timer/>
       }
       
     </div>
