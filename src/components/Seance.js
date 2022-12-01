@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Timer from './Timer';
 import '../styles/Seance.css'
 import ListeExeBorderTop from './ListeExeBorderTop';
+import ChargingBarTimer from './ChargingBarTimer';
 
 export default function Seance({list,titre}){
     const [curseurExe, updateCurseurExe] = useState(0); //Parcours les exe dans la liste global
@@ -10,8 +11,9 @@ export default function Seance({list,titre}){
     
     return (
         <div className='page-seance'>
+        
             <h1 className='titre-seance'>{titre[0]}</h1>
-            
+
             <h1 className='titre-exercise'>{list[curseurExe].exercise.comentsList[curseurInterne]}</h1>
             <Timer 
                 list={list}
@@ -23,6 +25,11 @@ export default function Seance({list,titre}){
 
 
             />
+            <ChargingBarTimer 
+                list = {list}
+                curseurInterne = {curseurInterne}
+                curseurExe = {curseurExe}
+                />
             <ListeExeBorderTop 
                 list = {list}
                 curseurExe = {curseurExe}

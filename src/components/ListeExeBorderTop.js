@@ -5,11 +5,12 @@ export default function ListeExeBorderTop({curseurExe,curseurInterne,list,update
     // Toute la partie avec Rep permet d'afficher : Serie : 1/2 ect ...
     let [ rep , updaterep] = useState(0)
     function changeRep(){
-        if (curseurInterne === 0 ){
-            updaterep(0)
-        }
+    
         if (list[curseurExe].exercise.comentsList[curseurInterne] === list[curseurExe].exercise.name){
             updaterep((e)=> e+1)
+        }
+        if (curseurInterne === 0 ){
+            updaterep(1)
         }
     }
     useEffect(()=>{
@@ -18,7 +19,7 @@ export default function ListeExeBorderTop({curseurExe,curseurInterne,list,update
     )
     return (
     <div className="top-border-liste-exe">
-    {curseurExe > 0 &&
+    {curseurExe > 0 ?
         <div className="exe-precedent exe-borderbox"
             onClick={()=>{
                 updateCurseurExe((e)=>e-1);
@@ -29,6 +30,8 @@ export default function ListeExeBorderTop({curseurExe,curseurInterne,list,update
         <h3>Previous</h3>
         <p>{list[curseurExe-1].exercise.name}</p>
         </div>
+    : 
+    <div className="exe-precedent exe-borderbox"></div>
     }
         
         <div className="exe-actuel exe-borderbox"
@@ -39,8 +42,9 @@ export default function ListeExeBorderTop({curseurExe,curseurInterne,list,update
         <h3>Now</h3>
         <p>{list[curseurExe].exercise.name}</p>
         <p>Series : {rep} / {list[curseurExe].exercise.repetitionNumber}</p>
+        
         </div>
-    {curseurExe < list.length-1 &&
+    {curseurExe < list.length-1 ?
         <div className="exe-suivant exe-borderbox"
             onClick={()=>{
                 updateCurseurExe((e)=>e+1);
@@ -49,7 +53,9 @@ export default function ListeExeBorderTop({curseurExe,curseurInterne,list,update
                 }}>
         <h3>Next</h3>
         <p>{list[curseurExe+1].exercise.name}</p>
-        </div>    
+        </div>
+    : 
+    <div className="exe-suivant exe-borderbox"></div>    
     }
        
     </div>

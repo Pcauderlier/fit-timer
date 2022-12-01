@@ -10,6 +10,7 @@
 Reorganise tout le site en plusieurs pages differentes
 
 -mettre une bande au dessus avec previous et next exercise
+- enlever les boutons quand Seance Terminee !
 - Styliser toute la partie chronos
 - Crer un logo Fit-Timer et le rajouter 
 - mettre le site en ligne
@@ -17,6 +18,7 @@ Reorganise tout le site en plusieurs pages differentes
 !!!!Far Future:
 
 - Ajout d'exercice pre-enregistrer 
+- Page de Stat recapitulatives a la fin de la seance
 - Possibiliter de modifier un Exercice dans la liste
 - Crer une page dedier a la creation d'exercices :
     - Nom 

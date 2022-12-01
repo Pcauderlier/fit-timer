@@ -89,12 +89,12 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
     return (
         <div className="timer-box">
             {minute === -2 ? 
-           <div className='exe-remplace-chrono'> Exercise Time !</div>
+           <div className='exe-remplace-chrono chrono'> Exercise Time !</div>
            :
            minute === -3 ? // Fin de la seance, on affiche un msg dans H1
            null
            :
-            <div className='chiffres-chronos'>
+            <div className='chiffres-chronos chrono'>
 
                 {minute < 10 ? `0${minute}` : minute.toString()} : 
                 {seconde < 10 ? `0${seconde}` : seconde.toString()}

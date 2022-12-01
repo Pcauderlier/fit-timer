@@ -1,0 +1,10 @@
+.barre-chargement{
+    margin-top : 10px;
+    height: 25px;
+    width : 100%;
+    border : red solid 2px;
+}
+.chargement{
+    height : 25px;
+    
+}
