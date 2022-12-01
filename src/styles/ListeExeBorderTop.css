@@ -1,0 +1,33 @@
+.top-border-liste-exe{
+    margin-top: 50px;
+    width : 100%;
+
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+
+}
+.exe-borderbox{
+    height:100% ;
+
+    border: solid black 3px;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+
+}
+.exe-precedent{
+    background-color: #bbbff7;
+    border-top-left-radius: 30px;
+    width : 25%;
+}
+.exe-actuel{
+    background-color: #979efc;
+    width: 50%;
+}
+.exe-suivant{
+    background-color: #717bff;
+    border-top-right-radius: 30px;
+    width : 25%;
+}

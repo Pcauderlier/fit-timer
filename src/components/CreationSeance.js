@@ -12,18 +12,31 @@ export default function CreationSeance({list,updateList, startSeance, updateStar
         let newList = list.map((e)=>e)
 
         let l = [];
+        let txt = [];
         let dureExe;
-        for (let i of newList ){
-            l=[]
-            dureExe = i.exercise.needTimer ? i.exercise.duration : [-2,-2];
+        for (let i in newList ){
+            l=[];
+            txt=[];
+            dureExe = newList[i].exercise.needTimer ? newList[i].exercise.duration : [-2,-2];
             l.push(dureExe);
-            console.log(i.exercise.repetitionNumber)
-            for (let e=1 ; e < i.exercise.repetitionNumber;e++ ){
-                l.push(i.exercise.pauseBetweenRepetition);
+            txt.push(newList[i].exercise.name)
+           
+            for (let e=1 ; e < newList[i].exercise.repetitionNumber;e++ ){
+                l.push(newList[i].exercise.pauseBetweenRepetition);
                 l.push(dureExe);
+                txt.push('Pause')
+                txt.push(newList[i].exercise.name)
             }
-            l.push(i.exercise.pauseBetweenExe);
-            i.exercise.timerList = l;
+            if (list.length-1 > i ){
+                l.push(newList[i].exercise.pauseBetweenExe);
+                txt.push('Big Pause')
+            }
+            else{
+                l.push([-3,-3]);
+                txt.push('Good Job ! You re done !')
+            }
+            newList[i].exercise.timerList = l;
+            newList[i].exercise.comentsList = txt;
         }
         updateList(newList)
 

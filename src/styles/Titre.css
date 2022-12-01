@@ -30,12 +30,12 @@
     background-color: #d6feff;
     color: #011a49;
 }
-button:hover{
+.valid:hover{
     background-color: orange;
     font-weight: bold;
 
 }
-button:active{
+.valid:active{
     color:white;
     box-shadow: 1px 2px grey;
 }

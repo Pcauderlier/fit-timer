@@ -61,7 +61,7 @@ input {
     height: 30px;
     
 }
-input[type=submit]{
+.subm{
     background-color: orange;
     width: 80%;
 }

@@ -121,7 +121,7 @@ function Form({list,updateList}){
                </div>
                }       
                <div className='input-box'>
-                    <input type='submit' className='button' value={'Add to Session'}/>
+                    <input type='submit' className='button subm' value={'Add to Session'}/>
                </div>        
             </form>
             

@@ -1,5 +1,5 @@
 import '../styles/App.css'
-import Timer from './Timer';
+import Seance from './Seance';
 import Titre from './Titre';
 import CreationSeance from './CreationSeance';
 import { useState } from 'react';
@@ -21,13 +21,13 @@ function App() {
       <Titre updateTitre = {updateTitre} titre={titre}
       />
       :
-        //!startSeance ? 
+        !startSeance ? 
         <CreationSeance list={list} updateList={updateList} 
       startSeance = {startSeance} updateStartSeance ={updateStartSeance} 
         titre={titre} updateTitre={updateTitre}
       />
-      //:
-      //<Timer/>
+      :
+      <Seance list={list} titre={titre} />
       }
       
     </div>

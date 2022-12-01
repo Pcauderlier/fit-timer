@@ -1,6 +1,11 @@
 .timer-box
 {
-    font-size: 60px;
     text-align: center;
 
+}
+.chiffres-chronos{
+    font-size: 80px;
+}
+.exe-remplace-chrono{
+    font-size: 25px;
 }
