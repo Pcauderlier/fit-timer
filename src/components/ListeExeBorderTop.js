@@ -38,6 +38,7 @@ export default function ListeExeBorderTop({curseurExe,curseurInterne,list,update
             onClick={()=>{
                 updateCurseurInterne(0);
                 updateTriggerNext((e)=> !e) //Sert a declencher un UseEffect dans le composant Timer
+                console.log('TriggerNext est appeler')
                 }}>
         <h3>Now</h3>
         <p>{list[curseurExe].exercise.name}</p>

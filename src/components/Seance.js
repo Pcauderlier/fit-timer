@@ -2,12 +2,14 @@ import { useState } from 'react';
 import Timer from './Timer';
 import '../styles/Seance.css'
 import ListeExeBorderTop from './ListeExeBorderTop';
-import ChargingBarTimer from './ChargingBarTimer';
+
+
 
 export default function Seance({list,titre}){
     const [curseurExe, updateCurseurExe] = useState(0); //Parcours les exe dans la liste global
     const [curseurInterne, updateCurseurInterne] = useState(0)// Parcours les timer dans la liste timer de chaque exe
     const [triggerNext , updateTriggerNext] = useState(false) //Sert a declencher une fonction dans un autre composant
+    
     
     return (
         <div className='page-seance'>
@@ -25,11 +27,6 @@ export default function Seance({list,titre}){
 
 
             />
-            <ChargingBarTimer 
-                list = {list}
-                curseurInterne = {curseurInterne}
-                curseurExe = {curseurExe}
-                />
             <ListeExeBorderTop 
                 list = {list}
                 curseurExe = {curseurExe}

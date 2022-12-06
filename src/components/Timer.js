@@ -1,5 +1,17 @@
 import { useEffect, useState } from 'react';
 import '../styles/Timer.css'
+import styled from 'styled-components';
+
+const ChargingBar = styled.div`
+margin-top: 30px;
+width :100%;
+background-color: green;
+height : 25px;
+border-left : solid black 4px;
+border-right : solid black 4px;
+transform : scaleX(${({size})=> size})
+
+`
 
 
 
@@ -10,9 +22,14 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
     const [seconde , updateSeconde] = useState(0);
     const [isTimerOn , updateIsTimerOn] = useState(false);
     const [isPaused , updateisPaused] = useState(false);
+    const [size, setSize] = useState(0);
+    const [fullTime , updateFullTime] = useState(0)
+
+
+
     
     function nextTimer(n){ // number ==> 1 pour next / 0 pour recomencer / -1 pour previous
-        if (list[curseurExe].exercise.timerList.length > curseurInterne+n){
+        if (list[curseurExe].exercise.timerList.length > curseurInterne+n){ //Verif que timer list est contient le curseur+n
             //!!! Latence sur Usestate donc update dans la fonction puis avec usestate
             setTimer(list[curseurExe].exercise.timerList[curseurInterne+n][0],
                 list[curseurExe].exercise.timerList[curseurInterne+n][1]
@@ -62,7 +79,7 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
     }
     
     function setTimer(m,s){
-        updateIsTimerOn(true)
+
         updateMinute(m);
         updateSeconde(s);        
     }
@@ -100,15 +117,16 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
                 {seconde < 10 ? `0${seconde}` : seconde.toString()}
             </div>
             }
+            <ChargingBar size = {size}/>
             <button onClick={()=>{setTimer(list[0].exercise.timerList[0][0],
                 list[0].exercise.timerList[0][1]);
                 updateCurseurExe(0);
                 updateCurseurInterne(0)
-            }}>Start</button>
-            <button onClick={()=> nextTimer(1)} > Next </button>
-            <button onClick={()=> nextTimer(0)}> Restart exercise</button>
-            <button onClick={()=> nextTimer(-1)}>Previous Exercise</button>
-            <button onClick={()=> timerPause() }>Pause</button>
+            }}>REStart Session</button>
+            <button onClick={()=>{updateIsTimerOn(true);nextTimer(1)}} >
+            Next </button>
+            <button onClick={()=> {updateIsTimerOn(false);nextTimer(0)}}> Restart timer</button>
+            <button onClick={()=> timerPause() }>{isTimerOn ? 'Pause' : 'Play'}</button>
 
         </div>
     )
