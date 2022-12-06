@@ -4,12 +4,13 @@ import styled from 'styled-components';
 
 const ChargingBar = styled.div`
 margin-top: 30px;
+margin-bottom : 30px;
 width :100%;
 background-color: green;
 height : 25px;
-border-left : solid black 4px;
-border-right : solid black 4px;
-transform : scaleX(${({size})=> size})
+
+transform : scaleX(${({size})=> size});
+transform-origin : left
 
 `
 
@@ -23,11 +24,18 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
     const [isTimerOn , updateIsTimerOn] = useState(false);
     const [isPaused , updateisPaused] = useState(false);
     const [size, setSize] = useState(0);
-    const [fullTime , updateFullTime] = useState(0)
 
-
-
-    
+    function changeSize(){
+        let timeInSec = minute*60 + seconde;
+        let totalTime = list[curseurExe].exercise.timerList[curseurInterne][0]*60 + list[curseurExe].exercise.timerList[curseurInterne][1];
+        if (totalTime < 0 ){
+            setSize(0)
+        }
+        else{
+            setSize((totalTime-timeInSec)/totalTime)
+        }
+    }
+     
     function nextTimer(n){ // number ==> 1 pour next / 0 pour recomencer / -1 pour previous
         if (list[curseurExe].exercise.timerList.length > curseurInterne+n){ //Verif que timer list est contient le curseur+n
             //!!! Latence sur Usestate donc update dans la fonction puis avec usestate
@@ -63,6 +71,7 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
             
         }
         if (isTimerOn){
+            
             if (seconde===0){
                 if (minute === 0){
                     nextTimer(1)
@@ -89,6 +98,7 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
 
     }
     useEffect(()=>{
+        changeSize();
         let timer = setTimeout(()=>{
             timerRun()},
             1000
@@ -118,14 +128,16 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
             </div>
             }
             <ChargingBar size = {size}/>
+            
+            {/*Bouton pas specilement utile 
             <button onClick={()=>{setTimer(list[0].exercise.timerList[0][0],
                 list[0].exercise.timerList[0][1]);
                 updateCurseurExe(0);
                 updateCurseurInterne(0)
-            }}>REStart Session</button>
-            <button onClick={()=>{updateIsTimerOn(true);nextTimer(1)}} >
-            Next </button>
+            }}>REStart Session</button>*/}
+            
             <button onClick={()=> {updateIsTimerOn(false);nextTimer(0)}}> Restart timer</button>
+            <button onClick={()=>{updateIsTimerOn(true);nextTimer(1)}}>Next</button>
             <button onClick={()=> timerPause() }>{isTimerOn ? 'Pause' : 'Play'}</button>
 
         </div>
