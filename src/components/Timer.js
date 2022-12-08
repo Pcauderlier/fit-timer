@@ -1,10 +1,14 @@
 import { useEffect, useState } from 'react';
 import '../styles/Timer.css'
 import styled from 'styled-components';
+import playButton from '../assets/Tplay.png';
+import pauseButton from '../assets/Tpause.png'
+import restartButton from '../assets/Trestart.png'
+import nextButton from '../assets/Tnext.png'
 
 const ChargingBar = styled.div`
-margin-top: 30px;
-margin-bottom : 30px;
+margin-top: 0px;
+margin-bottom : 0px;
 width :100%;
 background-color: green;
 height : 25px;
@@ -121,10 +125,15 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
            minute === -3 ? // Fin de la seance, on affiche un msg dans H1
            null
            :
+           <div>
+           <button className='restart-button' onClick={()=> {updateIsTimerOn(false);nextTimer(0)}}> 
+           <img src={restartButton} alt='restart button' className='button-img'/>
+           </button>
             <div className='chiffres-chronos chrono'>
 
                 {minute < 10 ? `0${minute}` : minute.toString()} : 
                 {seconde < 10 ? `0${seconde}` : seconde.toString()}
+            </div>
             </div>
             }
             <ChargingBar size = {size}/>
@@ -136,10 +145,18 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
                 updateCurseurInterne(0)
             }}>REStart Session</button>*/}
             
-            <button onClick={()=> {updateIsTimerOn(false);nextTimer(0)}}> Restart timer</button>
-            <button onClick={()=>{updateIsTimerOn(true);nextTimer(1)}}>Next</button>
-            <button onClick={()=> timerPause() }>{isTimerOn ? 'Pause' : 'Play'}</button>
+            
+            <button className='button-play-pause' onClick={()=>{updateIsTimerOn(true);nextTimer(1)}}>
+            <img src={nextButton} alt='next button' className='button-img'/>
 
+            </button>
+            {minute > -2 && 
+            <button className='button-play-pause' onClick={()=> timerPause() }>{isTimerOn ? 
+            <img src={pauseButton} alt='pause button' className='button-img'/>
+            :
+            <img src={playButton} alt='play button' className='button-img'/>
+            }</button>
+            }
         </div>
     )
 }

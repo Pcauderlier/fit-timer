@@ -1,8 +1,6 @@
 .timer-box
 {
     text-align: center;
-    width: 100%;
-
 }
 .chrono{
     padding: 20px;
@@ -14,4 +12,33 @@
 .exe-remplace-chrono{
     font-size: 50px;
 
+}
+.button-play-pause{
+    width : 20%;
+    min-width: 150px;
+    border : 0px ;
+
+    background-color: inherit;
+}
+.button-play-pause:active{
+    background-color: orange;
+    width : 21%;
+    border-radius: 100%;
+}
+.button-img{
+    max-width: 100%;
+}
+.restart-button{
+    width : 8%;
+    min-width: 50px;
+    border : 0px ;
+    background-color: inherit;
+     position: absolute;
+     left : 10%;
+
+}
+.restart-button:active{
+    background-color: orange;
+    width : 9%;
+    border-radius: 100%;
 }
