@@ -1,3 +1,7 @@
+@font-face {
+	font-family : 'Bruce';
+	src : url("../assets/police/BruceForever.ttf")
+}
 .timer-box
 {
     text-align: center;
@@ -5,10 +9,22 @@
 .chrono{
     padding: 20px;
 }
-.chiffres-chronos{
-    font-size: 80px;
-
+@media screen and (min-width: 601px){
+    .chiffres-chronos{
+        font-family: 'Bruce';
+        font-size: 80px;
+    }
 }
+@media screen and (max-width: 600px){
+    .chiffres-chronos{
+        font-family: 'Bruce';
+        font-size: 55px;
+    }
+}
+
+    
+
+
 .exe-remplace-chrono{
     font-size: 50px;
 
@@ -35,8 +51,10 @@
     background-color: inherit;
      position: absolute;
      left : 10%;
+ 
 
 }
+
 .restart-button:active{
     background-color: orange;
     width : 9%;

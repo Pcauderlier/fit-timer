@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import '../styles/Timer.css'
 import styled from 'styled-components';
-import playButton from '../assets/Tplay.png';
-import pauseButton from '../assets/Tpause.png'
-import restartButton from '../assets/Trestart.png'
-import nextButton from '../assets/Tnext.png'
+import playButton from '../assets/img/Tplay.png';
+import pauseButton from '../assets/img/Tpause.png'
+import restartButton from '../assets/img/Trestart.png'
+import nextButton from '../assets/img/Tnext.png'
 
 const ChargingBar = styled.div`
-margin-top: 0px;
-margin-bottom : 0px;
+margin : 0px;
 width :100%;
 background-color: green;
 height : 25px;
@@ -125,14 +124,15 @@ function Timer({list,curseurExe,updateCurseurExe,curseurInterne,updateCurseurInt
            minute === -3 ? // Fin de la seance, on affiche un msg dans H1
            null
            :
-           <div>
+           <div className='container-restart'>
            <button className='restart-button' onClick={()=> {updateIsTimerOn(false);nextTimer(0)}}> 
            <img src={restartButton} alt='restart button' className='button-img'/>
            </button>
             <div className='chiffres-chronos chrono'>
 
-                {minute < 10 ? `0${minute}` : minute.toString()} : 
-                {seconde < 10 ? `0${seconde}` : seconde.toString()}
+               <span> {minute < 10 ? `0${minute}` : minute.toString()} </span>
+              <span> : </span>
+                <span>{seconde < 10 ? `0${seconde}` : seconde.toString()}</span>
             </div>
             </div>
             }

@@ -33,3 +33,7 @@ Reorganise tout le site en plusieurs pages differentes
 - Parler a des coachs sportifs pour preconfigurer des seances publics
 - Crer un acces 'coach' (payant ?) qui permet a d'autre de crer des seances et de les partager
 
+
+
+
+/\/\/\/\/\/\/Font family du chrono : Bruce Forever (copyright : https://graphicsauce.co/bruce-forever-batman-font/)/\/\/\/\/\/\
